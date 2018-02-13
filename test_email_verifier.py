@@ -4,6 +4,9 @@ from email_verifier import *
 
 class TestEmailVerifier(unittest.TestCase):
 
+    def test_first_character_non_numeric(self):
+        self.assertFalse(is_valid_email('1asdf@domain'))
+
     def test_leading_characters(self):
         self.assertFalse(is_valid_email('@domain.com'))
 
