@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 Created on Wed Feb  7 20:25:11 2018
@@ -13,8 +14,17 @@ class TestsplitTip(unittest.TestCase):
     def test_emptylist(self):  #it checks if the list is empty
         self.assertEqual(len(function5.splitTip(12, 3)), 3)
     
-    def test_input(self): #it check the valid input
-        self.assertRaises(ValueError, function5.takeInput())
+    def test_main(self): #it checks the main method
+        self.assertRaises(ValueError, function5.main())
+    
+    def test_validinput(self): #it checks the valid input
+        self.assertRaises(ValueError, function5.takeInput(12, 3))
+        
+    def test_invalid_amount(self): #it checks the invalid amount
+        self.assertRaises(ValueError, function5.takeInput("12dfgg", 3))
+        
+    def test_invalid_guest(self): #it checks the invalid number of guests
+        self.assertRaises(ValueError, function5.takeInput(12, "3dfgdf"))
     
     def test_eventip(self):  #it checks if even amount of tips is equally distributed
         self.assertEqual(function5.splitTip(12, 3),[4.6, 4.6, 4.6])
