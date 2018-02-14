@@ -16,5 +16,7 @@ class TestEmailVerifier(unittest.TestCase):
     def test_contains_at(self):
         self.assertTrue(is_valid_email('testemail@domain.com'))
 
+    def test_domain_format(self):
+        self.assertFalse(is_valid_email('testemail@domain'))
 if __name__ == '__main__':
     unittest.main()
