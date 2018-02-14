@@ -16,13 +16,13 @@ class Test_bmi(unittest.TestCase):
         self.assertEqual(BMI.determine(22), "Normal weight")
 
     def test_invalid_inputF(self):
-        self.assertRaises(ValueError, BMI.bmi('lll', 3, 125))
+        self.assertRaises(ValueError, BMI.bmi('blah', 3, 125))
 
     def test_invalid_inputI(self):
         self.assertRaises(ValueError, BMI.bmi(5, 'blah', 125))
 
     def test_invalid_inputW(self):
-        self.assertRaises(ValueError, BMI.bmi(5, 3, 'kkk'))
+        self.assertRaises(ValueError, BMI.bmi(5, 3, 'blah'))
 
 
 
