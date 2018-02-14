@@ -7,6 +7,9 @@ class TestEmailVerifier(unittest.TestCase):
     def test_first_character_non_numeric(self):
         self.assertFalse(is_valid_email('1asdf@domain'))
 
+    def test_double_periods(self):
+        self.assertFalse(is_valid_email('test..email@domain.com'))
+
     def test_leading_characters(self):
         self.assertFalse(is_valid_email('@domain.com'))
 
