@@ -18,13 +18,19 @@ class TestsplitTip(unittest.TestCase):
         self.assertRaises(ValueError, function5.main())
     
     def test_validinput(self): #it checks the valid input
-        self.assertRaises(ValueError, function5.takeInput(12, 3))
+        self.assertRaises(ValueError, function5.processInput(12, 3))
+    
+    def test_zero_guest(self): #it checks the valid input
+        self.assertRaises(ValueError, function5.processInput(12, 0))
+    
+    def test_neg_amount(self): #it checks the valid input
+        self.assertRaises(ValueError, function5.processInput(-12, 4))
         
     def test_invalid_amount(self): #it checks the invalid amount
-        self.assertRaises(ValueError, function5.takeInput("12dfgg", 3))
+        self.assertRaises(ValueError, function5.processInput("12dfgg", 3))
         
     def test_invalid_guest(self): #it checks the invalid number of guests
-        self.assertRaises(ValueError, function5.takeInput(12, "3dfgdf"))
+        self.assertRaises(ValueError, function5.processInput(12, "3dfgdf"))
     
     def test_eventip(self):  #it checks if even amount of tips is equally distributed
         self.assertEqual(function5.splitTip(12, 3),[4.6, 4.6, 4.6])
