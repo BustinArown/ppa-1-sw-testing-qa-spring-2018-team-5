@@ -22,5 +22,8 @@ class TestEmailVerifier(unittest.TestCase):
     def test_allow_symbols(self):
         self.assertTrue(is_valid_email('testemail!$%*+-=?^_{|}~@domain.com'))
 
+    def test_disallowed_symbols(self):
+        self.assertFalse(is_valid_email('testemail"\'`'))
+
 if __name__ == '__main__':
     unittest.main()
