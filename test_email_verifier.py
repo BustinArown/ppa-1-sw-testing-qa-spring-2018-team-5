@@ -25,5 +25,8 @@ class TestEmailVerifier(unittest.TestCase):
     def test_disallowed_symbols(self):
         self.assertFalse(is_valid_email('testemail"\'`'))
 
+    def test_empty_address(self):
+        self.assertFalse(is_valid_email(''))
+
 if __name__ == '__main__':
     unittest.main()
