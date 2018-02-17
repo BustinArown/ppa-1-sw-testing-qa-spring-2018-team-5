@@ -28,5 +28,8 @@ class TestEmailVerifier(unittest.TestCase):
     def test_empty_address(self):
         self.assertFalse(is_valid_email(''))
 
+    def test_input_is_string(self):
+        self.assertFalse(is_valid_email(int(5)))
+
 if __name__ == '__main__':
     unittest.main()
