@@ -1,0 +1,34 @@
+Name                      Stmts   Miss  Cover
+---------------------------------------------
+body_mass_index.py           22      0   100%
+test_body_mass_index.py      35      0   100%
+---------------------------------------------
+TOTAL                        57      0   100%
+
+Name                 Stmts   Miss  Cover
+----------------------------------------
+retirement.py            7      0   100%
+test_retirement.py       9      0   100%
+----------------------------------------
+TOTAL                   16      0   100%
+
+Name                        Stmts   Miss  Cover
+-----------------------------------------------
+shortest_distance.py            3      0   100%
+test_shortest_distance.py       8      0   100%
+-----------------------------------------------
+TOTAL                          11      0   100%
+
+Name                     Stmts   Miss  Cover
+--------------------------------------------
+email_verifier.py            3      0   100%
+test_email_verifier.py      21      0   100%
+--------------------------------------------
+TOTAL                       24      0   100%
+
+Name                    Stmts   Miss  Cover
+-------------------------------------------
+split_the_tip.py           13      0   100%
+test_split_the_tip.py      12      0   100%
+-------------------------------------------
+TOTAL                      25      0   100%
