@@ -6,10 +6,24 @@
 
 def main():
     print("Welcome to the Retirement Savings Calculator")
-    curr_age = int(input("How old are you currently? "))
-    salary = int(input("What is your annual salary? "))
-    saved = int(input("What percentage have you saved? "))
-    desired = int(input("What is your desired retirement savings? "))
+
+    try:
+        curr_age = int(input("How old are you currently? "))
+    except ValueError:
+        print("Please enter a whole number. ")
+    try:
+        salary = int(input("What is your annual salary? "))
+    except ValueError:
+        print("Please enter a whole number. ")
+    try:
+        saved = int(input("What percentage have you saved? "))
+    except ValueError:
+        print("Please enter a whole number. ")
+    try:
+        desired = int(input("What is your desired retirement savings? "))
+    except ValueError:
+        print("Please enter a whole number. ")
+
     curr_saved = per_saved(salary, saved)
     employer = employer_match(curr_saved)
     result = compute(curr_age, desired, curr_saved, employer)
