@@ -2,7 +2,7 @@ import unittest
 import main
 
 
-class Test_retirement(unittest.TestCase):
+class TestRetirement(unittest.TestCase):
 
     def test_curr_saved(self):
         self.assertEqual(main.main(10000, 10), 1000)
@@ -10,6 +10,5 @@ class Test_retirement(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
 
 TestRunner.run()

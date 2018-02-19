@@ -10,8 +10,8 @@ saved = int(input("What percentage have you saved? "))
 desired = int(input("What is your desired retirement savings? "))
 
 inc_age = curr_age
-curr_saved = (salary*(saved/100))
-employer = (curr_saved*(35/100))
+curr_saved = (salary * (saved / 100))
+employer = (curr_saved * (35 / 100))
 
 while inc_age <= 100:
     if inc_age == 100:
@@ -23,4 +23,3 @@ while inc_age <= 100:
     else:
         curr_saved += employer
         inc_age += 1
-
