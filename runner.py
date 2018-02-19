@@ -160,7 +160,7 @@ if __name__ == "__main__":
                 continue
             print("The distance between (%f,%f) and (%f,%f) is %f." % (x1, y1,
                                                                        x2, y2,
-                                                                       shortest_distance.distance(x1, y1, x2, y2)))
+                                                                       shortest_distance.shortest_distance(x1, y1, x2, y2)))
 
         elif function_choice == 4:
             address = input("Enter a email address to validate. x to exit ")
