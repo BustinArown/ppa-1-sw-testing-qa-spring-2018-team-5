@@ -14,7 +14,7 @@ Pip is recommended to install coverage. Installation instructions for pip may be
 Coverage may be installed using pip by using the command `pip install coverage` or by downloading the package from: https://pypi.python.org/pypi/coverage/.
 
 ## Running Tests
-Tests may be run on Linux or Mac using the terminal. From the project directory, the command `python3.6 test_function` will run a specified test file. On Windows, tests may be run via an IDE by running the test file. 
+Tests may be run on Linux or Mac using the terminal. From the project directory, the command `python3.6 test_file` or `coverage run test_file` will run a specified test file. On Windows, tests may be run via an IDE by running the test file. 
 
 ## Coverage Testing
 The coverage package is used to check coverage. This is done via the command line with the command `coverage run test_function`. To view the results the command `coverage report` is used.
