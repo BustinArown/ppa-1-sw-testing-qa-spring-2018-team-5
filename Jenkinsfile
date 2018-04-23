@@ -1,23 +1,24 @@
 pipeline {
-	agent any
+	agent any 
 	
-	stages {
-		stage ('Build') {
-		
-			steps {
-				withMaven(maven : 'maven_3_5_3') {
-					sh 'mvn clean compile'
+		stages {
+		    stage ("Building") {
+				steps {
+					bat "echo 'Buidling File....'"
 				}
 			}
-		}
-		
-		stage ('Deploy') {
-		
-			steps {
-				withMaven(maven : 'maven_3_5_3') {
-					sh 'mvn deploy'
+			stage ("Testing") {
+				steps {
+					bat "echo 'Tests Running....'"
 				}
 			}
+			}
+		post {
+			success {
+				bat "echo 'Pipeline reached the finish line!'"
+			}
+			failure {
+				bat "echo 'Pipeline failed'"
+			}
 		}
-	}	
-}
+	}
