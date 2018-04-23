@@ -1,22 +1,29 @@
-node {
-	stage('Checkout') 
-	{
-		//Get code from repo
-		checkout scm
+pipeline {
+	agent any
+	stages {
+		stage('Building') 
+		{
+		steps 
+		{
+			checkout scm
+			bat 'make'
+		}
+		
 	}
-	stage('Build') 
-	{
-		bat 'virtualenv env'
-	}
-	post 
-	{
+		stage('Testing') 
+		{
+			steps 
+			{
+				echo 'Working'
+			}
+		}
+	post {
 		success 
 		{
-			bat "echo 'Pipeline reached the finish line!'"
-		}
-		failure 
+            		echo 'This will run only if successful'
+        	}
+        	failure 
 		{
-			bat "echo 'Pipeline failed'"
-		}
-	}
+            		echo 'This will run only if failed'
+       		}
 }
