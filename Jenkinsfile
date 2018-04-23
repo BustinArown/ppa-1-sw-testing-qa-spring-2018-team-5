@@ -1,19 +1,15 @@
 pipeline {
 	agent any
-	stages {
-		stage('Building') 
-		{
-		steps 
-		{
+	stages  {
+		stage('Building') {
+		steps {
 			checkout scm
 			bat 'make'
-		}
+			}
 		
-	}
-		stage('Testing') 
-		{
-			steps 
-			{
+		}
+		stage('Testing') {
+			steps {
 				echo 'Working'
 			}
 		}
@@ -27,4 +23,6 @@ pipeline {
             		echo 'This will run only if failed'
        		}
 	}
+	}
 }
+
