@@ -22,4 +22,3 @@ after_failure:
   - ./send.sh failure $WEBHOOK_URL
 notifications:
   email: false
-	
