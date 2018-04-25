@@ -7,9 +7,13 @@ before script:
   - git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5
 script:
   - coverage run test_shortest_distance.py
-  - coverage run test_body_mass_index.py 
-  - coverage run test_email_verifier.py 
-  - coverage run test_retirement.py 
+  - coverage report
+  - coverage run test_body_mass_index.py
+  - coverage report
+  - coverage run test_email_verifier.py
+  - coverage report
+  - coverage run test_retirement.py
+  - coverage report
   - coverage run test_split_the_tip.py
   - coverage report
 after_success:
