@@ -3,7 +3,8 @@ python:
 - '3.6'
 install:
 - pip install coverage
-- gcloud config set project "platinum-honor-201512"
+- curl https://sdk.cloud.google.com | bash
+- gcloud config set project platinum-honor-201512
 before script:
 - git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5
 - ssh-keygen -q -N "" -f ~/.ssh/google_compute_engine
@@ -28,6 +29,10 @@ after_failure:
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
 - chmod +x send.sh
 - "./send.sh failure $WEBHOOK_URL"
+deploy:
+  provider: gae
+  keyfile: client-secret.json
+  project: platinum-honor-201512
 notifications:
   email: false
 before_install:
