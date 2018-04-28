@@ -8,7 +8,7 @@ before script:
 - git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5
 script:
 - gcloud -q preview app deploy app.yaml --promote
-- run deployment.py
+- python deployment.py
 - coverage run test_shortest_distance.py
 - coverage report
 - coverage run test_body_mass_index.py
