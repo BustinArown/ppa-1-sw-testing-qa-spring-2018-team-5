@@ -3,6 +3,7 @@ python:
 - '3.6'
 install:
 - pip install coverage
+- curl https://sdk.cloud.google.com | bash
 before script:
 - git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5
 - ssh-keygen -q -N "" -f ~/.ssh/google_compute_engine
