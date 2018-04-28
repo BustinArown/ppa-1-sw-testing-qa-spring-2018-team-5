@@ -3,7 +3,7 @@ python:
 - '3.6'
 install:
 - pip install coverage
-- curl https://sdk.cloud.google.com | bash
+- gcloud components list
 - gcloud config set project platinum-honor-201512
 before script:
 - git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5
