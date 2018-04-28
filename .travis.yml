@@ -28,8 +28,12 @@ after_failure:
 - "./send.sh failure $WEBHOOK_URL"
 deploy:
   provider: gae
+  skip_cleanup: true
   keyfile: client-secret.json
   project: platinum-honor-201512
+  default: true
+  on:
+      all_branches: true
 notifications:
   email: false
 before_install:
