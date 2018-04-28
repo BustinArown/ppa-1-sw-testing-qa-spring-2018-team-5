@@ -3,10 +3,10 @@ python:
 - '3.6'
 install:
 - pip install coverage
+- gcloud config set project platinum-honor-201512
 before script:
 - git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5
 script:
-- gcloud config set project `platinum-honor-201512`
 - coverage run test_shortest_distance.py
 - coverage report
 - coverage run test_body_mass_index.py
