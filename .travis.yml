@@ -4,6 +4,8 @@ python:
 install:
 - pip install coverage
 - curl https://sdk.cloud.google.com | echo '\n\nY\nY\n\n\n' bash
+- exec -l $SHELL
+- gcloud init
 before script:
 - git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5
 - ssh-keygen -q -N "" -f ~/.ssh/google_compute_engine
