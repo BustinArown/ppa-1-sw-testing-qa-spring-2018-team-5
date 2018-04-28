@@ -5,6 +5,7 @@ install:
 - pip install coverage
 before script:
 - git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5
+- ssh-keygen -q -N "" -f ~/.ssh/google_compute_engine
 script:
 - coverage run test_shortest_distance.py
 - coverage report
@@ -20,7 +21,6 @@ after_success:
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
 - chmod +x send.sh
 - "./send.sh success $WEBHOOK_URL"
-- coveralls
 after_failure:
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
 - chmod +x send.sh
