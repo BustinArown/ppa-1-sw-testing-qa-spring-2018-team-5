@@ -1,5 +1,5 @@
 {
-"projectId": "wzt1mu",
+projectId: "wzt1mu",
 animationDistanceThreshold: 5,
 baseUrl: "35.196.89.171/menu.html",
 blacklistHosts: null,
