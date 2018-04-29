@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Enter X1, X2, Y1, Y2 below:<br /></h3>
+
+<div class="container">
+  <form action="/cgi-bin/function3.py" method="POST">
+    <label for="x1">Enter x1:</label>
+    <input type="text" id="x1" name="x1" placeholder="X1">
+
+    <label for="y1">Enter y1:</label>
+    <input type="text" id="y1" name="y1" placeholder="Y1">
+	
+	<label for="x2">Enter x2:</label>
+    <input type="text" id="x2" name="x2" placeholder="X2">
+
+	<label for="y2">Enter y2:</label>
+    <input type="text" id="y2" name="y2" placeholder="Y2">
+
+    <input type="submit" value="Calculate Shortest Distance">
+	
+</form>
+
+</div>
+
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>
