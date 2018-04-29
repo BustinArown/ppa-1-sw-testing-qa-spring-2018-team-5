@@ -19,7 +19,6 @@ script:
 - coverage report
 - coverage run test_split_the_tip.py
 - coverage report
-- python wsgi.py
 after_success:
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
 - chmod +x send.sh
