@@ -57,7 +57,9 @@
 describe('Menu test', function(){
   it('Visits the BMI site', function(){
     cy.contains('Body Mass Index').click()
-    cy.url().should('include', '/bmi.html')})
+    cy.url().should('include', '/bmi.html')
+    cy.wait(200)
+  })
 
   it('Go back to the menu', function (){
     cy.contains('Go Back').click()
@@ -65,7 +67,9 @@ describe('Menu test', function(){
 
   it('Visits the retirement site', function(){
     cy.contains('Retirement').click()
-    cy.url().should('include', '/retire.html')})
+    cy.url().should('include', '/retire.html')
+    cy.wait(200)
+  })
 
   it('Go back to the menu', function (){
     cy.contains('Go Back').click()
@@ -73,7 +77,9 @@ describe('Menu test', function(){
 
   it('Visits the shortest distance site', function(){
     cy.contains('Shortest Distance').click()
-    cy.url().should('include', '/short.html')})
+    cy.url().should('include', '/short.html')
+    cy.wait(200)
+  })
 
   it('Go back to the menu', function (){
     cy.contains('Go Back').click()
@@ -81,7 +87,9 @@ describe('Menu test', function(){
 
   it('Visits the email verifier site', function(){
     cy.contains('Email Verifier').click()
-    cy.url().should('include', '/email.html')})
+    cy.url().should('include', '/email.html')
+    cy.wait(200)
+  })
 
   it('Go back to the menu', function (){
     cy.contains('Go Back').click()
@@ -89,7 +97,9 @@ describe('Menu test', function(){
 
   it('Visits the split the tip site', function(){
     cy.contains('Split the Tip').click()
-    cy.url().should('include', '/split.html')})
+    cy.url().should('include', '/split.html')
+    cy.wait(200)
+  })
 
   it('Go back to the menu', function (){
     cy.contains('Go back').click()
@@ -113,11 +123,15 @@ describe('BMI test', function(){
 
   it('Type in weight', function (){
     cy.get('#weight')
-      .type('150').should('have.value', '150')})
+      .type('150').should('have.value', '150')
+    cy.wait(200)
+    })
 
   it('Compute BMI', function (){
     cy.contains('Compute BMI').click()
-    cy.url().should('include', '/cgi-bin/function1.py')})
+    cy.url().should('include', '/cgi-bin/function1.py')
+    cy.wait(500)
+  })
 
   it('Go back to the menu', function (){
     cy.visit('35.196.89.171/email.html')
@@ -145,11 +159,15 @@ describe('Retirement test', function(){
 
   it('Type in goal amount', function (){
     cy.get('#goal')
-      .type('500000').should('have.value', '500000')})
+      .type('500000').should('have.value', '500000')
+    cy.wait(200)
+    })
 
   it('Caluculate Goal', function (){
     cy.contains('Calculate').click()
-    cy.url().should('include', '/cgi-bin/function2.py')})
+    cy.url().should('include', '/cgi-bin/function2.py')
+    cy.wait(500)
+  })
 
   it('Go back to the menu', function (){
     cy.visit('35.196.89.171/retire.html')
@@ -177,11 +195,15 @@ describe('Shortest Distance test', function(){
 
   it('Enter y2', function (){
     cy.get('#y2')
-      .type('500000').should('have.value', '500000')})
+      .type('500000').should('have.value', '500000')
+    cy.wait(200)
+    })
 
   it('Caluculate SD', function (){
     cy.contains('Calculate').click()
-    cy.url().should('include', '/cgi-bin/function3.py')})
+    cy.url().should('include', '/cgi-bin/function3.py')
+    cy.wait(500)
+  })
 
   it('Go back to the menu', function (){
     cy.visit('35.196.89.171/short.html')
@@ -196,11 +218,15 @@ describe('Email test', function(){
 
   it('Type in an address', function (){
     cy.get('#address')
-      .type('fake@email.com').should('have.value', 'fake@email.com')})
+      .type('fake@email.com').should('have.value', 'fake@email.com')
+    cy.wait(200)
+    })
 
   it('Verify email address', function (){
     cy.contains('Verify').click()
-    cy.url().should('include', '/cgi-bin/function4.py')})
+    cy.url().should('include', '/cgi-bin/function4.py')
+    cy.wait(500)
+  })
 
   it('Go back to the menu', function (){
     cy.visit('35.196.89.171/email.html')
@@ -219,11 +245,15 @@ describe('Split the Tip test', function(){
 
   it('Enter total guests', function (){
     cy.get('#num2')
-      .type('3').should('have.value', '3')})
+      .type('3').should('have.value', '3')
+    cy.wait(200)
+    })
 
   it('Split tip', function (){
     cy.contains('Split the').click()
-    cy.url().should('include', '/cgi-bin/function5.py')})
+    cy.url().should('include', '/cgi-bin/function5.py')
+    cy.wait(500)
+  })
 
   it('Go back to the menu', function (){
     cy.visit('35.196.89.171/email.html')
