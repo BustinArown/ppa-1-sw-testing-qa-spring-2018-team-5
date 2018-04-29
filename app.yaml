@@ -1,3 +1,4 @@
+entrypoint: gunicorn -b :$PORT wsgi:app
 runtime: python
 threadsafe: yes
 env: flex
