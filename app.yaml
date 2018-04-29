@@ -1,4 +1,4 @@
-entrypoint: gunicorn -b :$PORT wsgi:app
+entrypoint: python shortest_distance.py
 runtime: python
 threadsafe: yes
 env: flex
