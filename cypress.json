@@ -1,3 +1,5 @@
 {
-  "projectId": "wzt1mu"
+  "baseUrl": "http://localhost:8080",
+  "videoRecording": false
 }
+
