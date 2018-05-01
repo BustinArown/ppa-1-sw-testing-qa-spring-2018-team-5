@@ -1,0 +1,28 @@
+{
+  "name": "ppa1team5",
+  "version": "1.0.0",
+  "description": "E2E testing",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^2.1.0"
+  },
+  "scripts": {
+    "test": "npm run cypress:run",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5.git"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "bdrice1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5/issues"
+  },
+  "homepage": "https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5#readme"
+}
