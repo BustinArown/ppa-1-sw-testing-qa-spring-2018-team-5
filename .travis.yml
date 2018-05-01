@@ -18,7 +18,7 @@ script:
 - coverage report
 - coverage run test_split_the_tip.py
 - coverage report
-- npm run cypress:run cypress_tests.js
+- npm start & cypress run
 after_success:
 - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
 - chmod +x send.sh
