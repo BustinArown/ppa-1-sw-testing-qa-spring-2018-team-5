@@ -1,0 +1,19 @@
+{
+	"name": "ppa-1-sw-testing-qa-spring-2018-team-5",
+	"version": "2.1.0",
+	"description": "using cypress to run e2e tests",
+	"main": "cypress_tests.js",
+	"scripts": {
+		"test": "npm start & cypress run"
+		},
+	"repository": {
+	"type": "git",
+	"url": "git+https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5.git"
+	},
+	"author": "Bdrice1",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5/issues"
+		},
+		"homepage": "https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5#readme"
+}
