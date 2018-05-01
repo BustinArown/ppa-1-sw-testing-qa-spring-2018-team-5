@@ -18,3 +18,17 @@ Tests may be run on Linux or Mac using the terminal. From the project directory,
 
 ## Coverage Testing
 The coverage package is used to check coverage. This is done via the command line with the command `coverage run test_function`. To view the results the command `coverage report` is used.
+
+## CI Server
+The CI server we used is Travis.  This link is to the interface to our sever.  We failed to get it working properly.  It begins to run our test suite, but it fails at the point of trying to run cypress tests and it also fails to deploy.  This is a link to its gui https://travis-ci.org/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5
+
+## CI Alternative
+  Because we could not get our continuous integration server to function properly, we performed all the tests for our screencast manually as well as deployed manually.  Everything works.  We just couldn't automate it.
+
+## Running the APP
+Here is the IP for the production version:  http://35.196.89.171/
+Here is the IP for the staging version: http://35.229.20.10/
+
+Make sure you use http and not https it fails with https
+
+Once you go to either one of those IP addresses, you can go to menu.html to begin running our app
