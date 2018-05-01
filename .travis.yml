@@ -33,7 +33,7 @@ deploy:
   provider: gae
   skip_cleanup: true
   keyfile: client-secret.json
-  project: platinum-honor-201512
+  project: secret-air-202801
   default: true
   on:
       all_branches: true
