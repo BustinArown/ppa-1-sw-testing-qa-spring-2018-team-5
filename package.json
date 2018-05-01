@@ -2,7 +2,7 @@
   "name": "ppa1team5",
   "version": "1.0.0",
   "description": "E2E testing",
-  "main": "cypress_tests.js",
+  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "cypress": "^2.1.0"
