@@ -3,7 +3,7 @@ python:
 - '3.6.3'
 install:
 - pip install coverage
-- npm install cypress
+- npm install
 before script:
 - git clone https://github.com/drbyron-github-classroom/ppa-1-sw-testing-qa-spring-2018-team-5
 - gcloud -q app deploy
